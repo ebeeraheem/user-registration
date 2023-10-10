@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700;6..12,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>User Registration</title>
+  </head>
+  <body>
+    <h1>User Registration</h1>
+    <main>
+      <h2>Create Account</h2>
+      <form action="/user-registration" method="post">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required />
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="mail" autocomplete="on" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="confirm">Confirm password:</label>
+        <input type="password" id="confirm" name="confirm" required />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required />
+
+        <fieldset>
+          <legend>Gender:</legend>
+          <label for="gender-male">
+            Male
+            <input
+              type="radio"
+              id="gender-male"
+              name="gender"
+              value="male"
+              required
+            />
+          </label>
+          <label for="gender-female">
+            Female
+            <input
+              type="radio"
+              id="gender-female"
+              name="gender"
+              value="female"
+              required
+            />
+          </label>
+        </fieldset>
+
+        <!-- <select name="" id="">
+          <option value="male" name="male">Male</option>
+          <option value="female" name="female">Female</option>
+        </select> -->
+
+        <label for="address">Address:</label>
+        <textarea
+          id="address"
+          name="address"
+          rows="4"
+          cols="50"
+          placeholder="Enter your address here"
+        ></textarea>
+
+        <label for="hobbies">Hobbies:</label>
+        <textarea
+          id="hobbies"
+          name="hobbies"
+          rows="4"
+          cols="50"
+          placeholder="Enter your hobbies here"
+        ></textarea>
+        <button type="submit">Sign Up</button>
+      </form>
+    </main>
+  </body>
+</html>
