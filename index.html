@@ -12,45 +12,50 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <script src="/scripts/script.js" defer></script>
     <title>User Registration</title>
   </head>
   <body>
     <h1>User Registration</h1>
     <main>
       <h2>Create Account</h2>
-      <form action="/user-registration" method="post">
+      <form action=" " method="post" id="form" class="form">
         <label for="fullname">Full Name:</label>
         <input type="text" id="fullname" name="fullname" required />
+        <small class="error" id="fullname-error"></small>
 
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required />
+        <small class="error" id="username-error"></small>
 
         <label for="mail">Email:</label>
         <input type="email" id="mail" name="mail" autocomplete="on" required />
+        <small class="error" id="email-error"></small>
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required />
+        <small class="error" id="password-error"></small>
 
-        <label for="confirm">Confirm password:</label>
-        <input type="password" id="confirm" name="confirm" required />
+        <label for="confirmPassword">Confirm password:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        />
+        <small class="error" id="confirmPassword-error"></small>
 
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required />
+        <input type="tel" id="phone" name="phone" />
 
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required />
+        <input type="number" id="age" name="age" />
 
         <fieldset>
           <legend>Gender:</legend>
           <label for="gender-male">
             Male
-            <input
-              type="radio"
-              id="gender-male"
-              name="gender"
-              value="male"
-              required
-            />
+            <input type="radio" id="gender-male" name="gender" value="male" />
           </label>
           <label for="gender-female">
             Female
@@ -59,12 +64,11 @@
               id="gender-female"
               name="gender"
               value="female"
-              required
             />
           </label>
         </fieldset>
 
-        <!-- <select name="" id="">
+        <!-- <select name="gender" id="gender">
           <option value="male" name="male">Male</option>
           <option value="female" name="female">Female</option>
         </select> -->
@@ -86,7 +90,7 @@
           cols="50"
           placeholder="Enter your hobbies here"
         ></textarea>
-        <button type="submit">Sign Up</button>
+        <button type="submit" id="btn">Sign Up</button>
       </form>
     </main>
   </body>

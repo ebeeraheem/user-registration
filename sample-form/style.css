@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  margin: 0 auto;
+  padding: 50px;
+  max-width: 400px;
+  background-color: moccasin;
+}
+
+label {
+  display: block;
+}

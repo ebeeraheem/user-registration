@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Sample Form</title>
+  </head>
+  <body>
+    <form action="" method="post" id="form" class="form">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required />
+      <small class="error" id="fullname-error"></small>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+      <small class="error" id="username-error"></small>
+
+      <label for="mail">Email:</label>
+      <input type="email" id="mail" name="mail" required />
+      <small class="error" id="mail-error"></small>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <small class="error" id="password-error"></small>
+
+      <label for="confirmPassword">Confirm password:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        required
+      />
+      <small class="error" id="confirmPassword-error"></small>
+
+      <button type="submit" id="btn">Sign Up</button>
+    </form>
+  </body>
+</html>
