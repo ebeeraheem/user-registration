@@ -41,6 +41,10 @@ h2 {
   margin-bottom: 0.7em;
 }
 
+small {
+  color: red;
+}
+
 /* Form styles */
 form {
   display: flex;
@@ -128,6 +132,42 @@ button:hover {
   color: var(--sec-text);
   border: 2px solid var(--sec-text);
   cursor: pointer;
+}
+
+/* CSS to initially hide the success card */
+.hidden {
+  display: none;
+}
+
+/* Additional CSS for the success card styling */
+#success-card {
+  width: 75%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  text-align: center;
+  background-color: var(--accent-colour);
+  color: var(--pri-text);
+  font-weight: 700;
+}
+
+#success-card img {
+  width: 65px;
+  height: 65px;
+  display: block;
+  margin: 0 auto;
+  fill: var(--main-colour);
+}
+
+#success-card h3 {
+  margin: 0.25em 0;
+  font-weight: 800;
+  font-size: 2em;
 }
 
 /* Tablet, big screen and horizontal view */

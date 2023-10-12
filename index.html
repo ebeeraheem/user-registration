@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,38 +13,37 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-    <script src="/scripts/script.js" defer></script>
     <title>User Registration</title>
   </head>
   <body>
     <h1>User Registration</h1>
     <main>
       <h2>Create Account</h2>
-      <form action=" " method="post" id="form" class="form">
+      <form action="" method="post" id="form" class="form" novalidate>
         <label for="fullname">Full Name:</label>
-        <input type="text" id="fullname" name="fullname" required />
         <small class="error" id="fullname-error"></small>
+        <input type="text" id="fullname" name="fullname" required />
 
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required />
         <small class="error" id="username-error"></small>
+        <input type="text" id="username" name="username" required />
 
         <label for="mail">Email:</label>
+        <small class="error" id="mail-error"></small>
         <input type="email" id="mail" name="mail" autocomplete="on" required />
-        <small class="error" id="email-error"></small>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
         <small class="error" id="password-error"></small>
+        <input type="password" id="password" name="password" required />
 
         <label for="confirmPassword">Confirm password:</label>
+        <small class="error" id="confirmPassword-error"></small>
         <input
           type="password"
           id="confirmPassword"
           name="confirmPassword"
           required
         />
-        <small class="error" id="confirmPassword-error"></small>
 
         <label for="phone">Phone:</label>
         <input type="tel" id="phone" name="phone" />
@@ -92,6 +92,13 @@
         ></textarea>
         <button type="submit" id="btn">Sign Up</button>
       </form>
+
+      <!-- Success message card (initially hidden) -->
+      <div id="success-card" class="hidden">
+        <img src="check-symbol.svg" alt="Success check icon" />
+        <h3>SUCCESS!</h3>
+        <p>Your account has been successfully created.</p>
+      </div>
     </main>
   </body>
 </html>
